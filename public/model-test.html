@@ -1,0 +1,83 @@
+<!DOCTYPE <html>
+<head>
+	<title>Model Test</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	
+	<style type="text/css">
+		form {
+			background-color: #DDD;
+			border: 1px solid #DDD;
+			border-radius: 5px;
+			margin: 10px;
+		}
+
+		.form-group {
+			margin: 15px 0;
+			padding: 0 5px;
+		}
+
+		.well {
+			background-color: #DDD;
+		}
+
+		input.ng-touched.ng-invalid {
+			border: 1px solid red;
+		}
+
+		.ngtouched.ng-valid {
+			border: 1px solid green;
+		}
+	</style>
+
+</head>
+<body ng-app="modelTest">
+	<div class="row">
+		<div class="col-md-8">
+			<form novalidate name="userForm">
+				<div class="form-group">
+				    <label for="first_name">First Name</label><br>
+				    <input type="text" class="form-control" id="first_name" ng-model="user.firstName" maxlength="50" required><br>
+				</div>
+				<div class="form-group">
+				    <label for="last_name">Last Name</label><br>
+				    <input type="text" class="form-control" id="last_name" ng-model="user.lastName" maxlength="100" required><br>
+				</div>
+				<div class="form-group">
+				    <label for="bdate">Birth Date</label><br>
+				    <input type="date" class="form-control" id="bdate" ng-model="user.bdate" required><br>
+				</div>
+				<div class="form-group">
+				    <label for="email">GitHub</label><br>
+				    <input type="url" class="form-control" id="email" ng-model="user.github" required><br>
+				</div>
+				<div class="form-group">
+				    <label for="icon">Icon</label><br>
+				    <select type="text" class="form-control" id="password" ng-model="user.icon" minlength="6" required minlength="8"><br>
+				</div>
+				<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+			</form>
+		<div>
+
+		<div class="col-md-4">
+			<div class="well" ng-if="userForm.$valid">
+	    		{{ user.icon }}
+	    		{{ user.firstName }}
+	    		{{ user.lastName }}
+	    		{{ user.bdate | date : M-d-yy}}
+	    		<a href="{{ user.github }}"></a>
+
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/templateTest.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
