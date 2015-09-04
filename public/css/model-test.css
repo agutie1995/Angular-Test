@@ -5,18 +5,23 @@ form {
 	margin: 10px;
 }
 
+.well {
+	margin: 10px 0;
+	width: auto;
+	height: auto;
+}
+
 img {
+	border: 1px solid black;
 	width: 100px;
 	height: 100px;
+	margin: 5px 0;
 }
 
 .form-group {
 	margin: 15px 0;
 	padding: 0 20px;
 }
-
-/*.well {
-}*/
 
 input.ng-touched.ng-invalid {
 	border: 1px solid red;

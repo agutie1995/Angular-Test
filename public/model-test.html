@@ -12,8 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/model-test.css">
 </head>
 <body ng-app="modelTest">
-	<div class="row">
-		<div class="col-md-8">
+	<main class="row">
+		<div class="col-md-7">
 			<form novalidate name="userForm">
 				<div class="form-group">
 				    <label for="first_name">First Name</label><br>
@@ -38,17 +38,17 @@
 				    </select>
 				</div>
 			</form>
-		<div>
+		</div>
 
-		<div class="col-md-4">
-			<div class="well" ng-if="userForm.$valid">
+		<div class="col-md-3">
+			<div class="well">
 				<img src="/img/{{ user.icon }}">
-				<p>{{ user.firstName }} {{ user.lastName }}</p>
-				<p>DOB: {{ user.bdate | date: format: longDate}}</p>
-				<p>{{ user.github }}</p>
+				<p id="name">{{ user.firstName }} {{ user.lastName }}</p>
+				<p id="dob">DOB: {{ user.bdate | date: format: longDate}}</p>
+				<p id="github">{{ user.github }}</p>
 			</div>
 		</div>
-	</div>
+	</main>
 
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
