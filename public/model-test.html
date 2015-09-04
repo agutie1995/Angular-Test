@@ -24,6 +24,10 @@
 				    <input type="text" class="form-control" id="last_name" ng-model="user.lastName" maxlength="100" required><br>
 				</div>
 				<div class="form-group">
+				    <label for="email">Email</label><br>
+				    <input type="text" class="form-control" id="e-mail" ng-model="user.email" required><br>
+				</div>
+				<div class="form-group">
 				    <label for="bdate">Birth Date</label><br>
 				    <input type="date" class="form-control" id="bdate" ng-model="user.bdate" required><br>
 				</div>
@@ -44,6 +48,7 @@
 			<div class="well">
 				<img src="/img/{{ user.icon }}">
 				<p id="name">{{ user.firstName }} {{ user.lastName }}</p>
+				<p id="email"> {{ user.email }} </p>
 				<p id="dob">DOB: {{ user.bdate | date: format: longDate}}</p>
 				<p id="github">{{ user.github }}</p>
 			</div>
