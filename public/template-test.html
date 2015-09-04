@@ -29,7 +29,7 @@
         <li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{letter | lowercase}}</li>
     </ul>
 
-    <img ng-repeat="picture in ['jg-lookingForAlaska.jpg', 'jg-paperTowns.jpg', 'ToKillAMockingbird.jpg']"  ng-src="{{ '/img/picture' }}" alt="Woo BOOKS">
+    <img ng-repeat=" img in ['city', 'animals', 'nature' ]" ng-src="http://lorempixel.com/400/200/{{ img }}">
 
    <script type="text/javascript" src="/js/angular.min.js"></script>
    <script type="text/javascript" src="/js/templateTest.js"></script>
